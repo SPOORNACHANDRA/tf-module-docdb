@@ -49,5 +49,4 @@ resource "aws_docdb_cluster" "main" {
   vpc_security_group_ids = [aws_security_group.main.id]
   db_cluster_parameter_group_name = aws_docdb_cluster_parameter_group.main.name
   tags       = merge(local.tags, { name = "${local.name_prefix}-cluster" })
-
 }
